@@ -1,0 +1,1113 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 2560px;
+  min-width: 1024px;
+  width: 91%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.upper_layer .wrapper {
+  padding: 4.2% 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.upper_layer a, .upper_layer span {
+  display: block;
+}
+
+h1 {
+  margin: 0 auto 0 0;
+}
+
+h1 img {
+  width: 252px;
+  height: 25px;
+}
+
+.ul_layer_1 {
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.ul_layer_2, .ul_layer_2 a {
+  color: rgba(128, 128, 128, .5);
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.phone_email, .physical_address, .time {
+  margin: 0 40px 0 64px;
+}
+
+.phone_email {
+  position: relative;
+}
+
+.phone_email a:hover {
+  text-decoration: underline;
+}
+
+.phone_email::before {
+  display: inline;
+  position: absolute;
+  left: -35px;
+  color: rgb(50,175,150);
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-size: 30px;
+  font-weight: 900;
+  transform: scaleX(-1);
+  vertical-align: middle;
+}
+
+.physical_address {
+  position: relative;
+}
+
+.physical_address::before {
+  display: inline;
+  position: absolute;
+  left: -35px;
+  color: rgb(50,175,150);
+  content: "\f015";
+  font-family: "Font Awesome 5 Free";
+  font-size: 30px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.time {
+  position: relative;
+}
+
+.time::before {
+  position: absolute;
+  left: -35px;
+  color: rgb(50,175,150);
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-size: 30px;
+  font-weight: 900;
+  transform: scaleX(-1);
+  vertical-align: middle;
+}
+
+.quote {
+  padding: 18px 28px;
+  border: 2px transparent solid;
+  color: rgb(255, 255, 255);
+  background-color: rgb(50,175,150);
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.quote:hover {
+  border: 2px rgb(0, 0, 0) solid;
+}
+
+nav {
+  background-color: rgb(16,16,16);
+}
+
+nav .wrapper {
+  padding: 1.5% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .wrapper a {
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+}
+
+nav ul li {
+  margin: 0 10px;
+  position: relative;
+}
+
+nav ul li a::after{
+  padding: 0 5px;
+  color: inherit;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+nav ul li a:hover{
+  color: rgb(50,175,150);
+}
+
+nav .wrapper > ul > li:hover .sub_menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_menu {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.sub_menu li {
+  background-color: rgb(16,16,16);
+}
+
+.your_cart {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.your_cart::before {
+  position: absolute;
+  left: 0;
+  color: inherit;
+  content: "\f290";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.your_cart:hover::before {
+  color: rgb(50,175,150);
+}
+
+.search {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.search::before {
+  position: absolute;
+  left: 0;
+  color: inherit;
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.search:hover::before {
+  color: rgb(50,175,150);
+}
+
+nav .wrapper div a {
+  padding: 0 20px;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+.capital {
+  text-transform: capitalize;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0 0;
+  display: none;
+  overflow: auto; 
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9); 
+}
+
+iframe {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.block {
+  display: block;
+}
+
+.company_details {
+  background-image: url(../image/slider.jpg);
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.company_details h2 {
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sub_heading span {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.links {
+  margin: 2% 0 2%;
+}
+
+.links a {
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.links a:hover {
+  text-decoration: underline;
+} 
+
+.links .read_more {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(50,175,150);
+}
+
+.links .contact_us {
+  color: rgb(204,204,204);
+  background-color: rgb(255, 255, 255);
+}
+
+.company_details ul {
+  padding: 0 0 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.company_details ul li {
+  box-sizing: border-box;
+  width: 25%;
+  height: 168px;
+  margin: 10px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.company_details ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.company_details ul li span:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  color: rgb(50,175,150);
+  font-size: 90px;
+}
+
+.company_details ul li span:nth-child(2) {
+  padding: 115px 0 0;
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.icon_caption:hover {
+  text-decoration: underline;
+}
+
+.truck {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.truck::before {
+  position: absolute;
+  left: 0;
+  color: inherit;
+  content: "\f0d1";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.ocean_freight {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.ocean_freight::before {
+  position: absolute;
+  left: 0;
+  color: inherit;
+  content: "\f21a";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.airfreight {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.airfreight::before {
+  position: absolute;
+  left: 0;
+  color: inherit;
+  content: "\f072";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.our_services h3 {
+  padding: 5% 0 0;
+  position: relative;
+  top: 0;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.our_services ul {
+  margin: 5% 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.our_services ul li {
+  width: 32%;
+  border: solid 1px gray;
+  margin: 2px;
+  position: relative;
+}
+
+.our_services h3::before {
+  width: 30px;
+  margin: 0 auto;
+  border-bottom: 2px solid rgb(50,175,150);
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  transform: translateY(10px);
+}
+
+.our_service_icon {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+
+.our_service_icon .cargo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .cargo::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f0d1";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_service_icon .parking_storage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .parking_storage::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f15b";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_service_icon .door_to_door {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .door_to_door::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_service_icon .logistic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .logistic::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f1b9";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_service_icon .warehouse {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .warehouse::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f275";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_service_icon .worldwide_transport {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgb(238,238,238);
+  position: relative;
+  text-indent: -9999px;
+}
+
+.our_service_icon .worldwide_transport::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: inherit;
+  content: "\f7a2";
+  font-family: "Font Awesome 5 Free";
+  font-size: inherit;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.our_services ul li h4 {
+  padding: 2% 1% 0 60px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.our_services ul li p {
+  padding: 0 1% 2% 60px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about_us .wrapper {
+  width: 100%;
+}
+
+.about_us ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about_us ul li {
+  width: 50%;
+}
+
+.about_us ul li:nth-child(1) {
+  background-color: rgb(249,249,249);
+}
+
+.about_us h3 {
+  padding: 100px 0 0 50px;
+  position: relative;
+  color: rgb(0, 0, 0, .8);
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about_us h3::before {
+  width: 40px;
+  border-bottom: 4px solid rgb(50,175,150);
+	position: absolute;
+  bottom: 0;
+  left: 50px;
+  content: "";
+  transform: translateY(10px);
+}
+
+.about_us p {
+  padding: 50px 0 0 50px;
+  color: rgb(0, 0, 0, .5);
+}
+
+.about_us p > span:nth-child(2) {
+  padding: 30px 0 0;
+}
+
+.about_us ul li:nth-child(1) a {
+  padding: 12px 14px;
+  border-radius: 5px;
+  margin: 50px 0 0 50px;
+  background-color: rgb(50,175,150);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.more_text p {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0 0 50px;
+  position: absolute;
+  background-color: rgb(50,175,150);
+  color: rgb(255, 255, 255);
+  transform: scaleY(0);
+  transition: all .5s ease;
+}
+
+.about_us ul li p > span {
+  display: block;
+}
+
+.about_us ul li:nth-child(2) {
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.about_us ul li:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+
+.play-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-btn {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.play-btn::before {
+  padding: 30px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  color: rgb(255, 255, 255);
+  content: "\f04b";
+  font-family: "Font Awesome 5 Free";
+  font-size: 35px;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.counters {
+  color: rgb(255, 255, 255);
+  background-color: rgb(51,51,51);
+  text-align: center;
+}
+
+.counters ul {
+  padding: 4%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.counters span {
+  display: block;
+}
+
+.projects_done {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.projects_done::before {
+  position: absolute;
+  top: -29px;
+  left: 19px;
+  color: rgb(50,175,150);
+  content: "\f542";
+  font-family: "Font Awesome 5 Free";
+  font-size: 35px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.hardworking_people {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.hardworking_people::before {
+  position: absolute;
+  top: -29px;
+  left: 34px;
+  color: rgb(50,175,150);
+  content: "\f0c0";
+  font-family: "Font Awesome 5 Free";
+  font-size: 35px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.years_of_experience {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.years_of_experience::before {
+  position: absolute;
+  top: -29px;
+  left: 43px;
+  color: rgb(50,175,150);
+  content: "\f164";
+  font-family: "Font Awesome 5 Free";
+  font-size: 35px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.branches {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.branches::before {
+  position: absolute;
+  top: -29px;
+  left: 8px;
+  color: rgb(50,175,150);
+  content: "\f118";
+  font-family: "Font Awesome 5 Free";
+  font-size: 35px;
+  font-weight: 900;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.counter {
+  font-size: 20px;
+}
+
+.counter_title {
+  padding-top: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+footer .wrapper > ul {
+  display: flex;
+  margin: 8% 0;
+}
+
+footer .wrapper > ul > li {
+  margin: 0 1%;
+}
+
+.cards {
+  display: flex;
+}
+
+footer h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+h3 {
+  margin: 0 0 4%;
+}
+
+.accordian_toggle {
+  border: 1px rgba(128, 128, 128, .5) solid;
+}
+
+.accordian_content {
+  border: 2px rgba(128, 128, 128, .8) solid !important;
+}
+
+.accordian li {
+  padding: 10px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.accordian_content span {
+  padding: 10px;
+  color: rgb(187,187,187);
+}
+
+.accordian li + li {
+  border-top: none;
+}
+
+.creative_professional, .honest_dependable, .quality_commitment, .always_improving {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.creative_professional::before {
+  padding: 0 10px;
+  color: rgb(187,187,187);
+  content: "\f21a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.honest_dependable:before {
+  padding: 0 10px;
+  color: rgb(187,187,187);
+  content: "\f072";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.quality_commitment::before {
+  padding: 0 10px;
+  color: rgb(187,187,187);
+  content: "\f0d1";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.always_improving::before {
+  padding: 0 10px;
+  color: rgb(187,187,187);
+  content: "\f7a2";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.right_arrow_container {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(249,249,249);
+}
+
+.right_arrow {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  text-indent: -9999px;
+}
+
+.right_arrow::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(187,187,187);
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 900;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+figcaption {
+  display: none;
+}
+
+.cards li {
+  margin: 0 2% 0 1%;
+  border: 1px rgba(128, 128, 128, .5) solid;
+}
+
+.card_data {
+  padding: 3%;
+}
+
+.card_data div {
+  padding: 15px 0 0;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.card_data div::before {
+  padding: 5px;
+  color: rgb(56,188,180);
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: top;
+}
+
+.card_data p {
+  padding: 15px 0;
+  color: rgb(128, 128, 128);
+  font-size: 15px;
+}
+
+.card_data a {
+  display: block;
+  color: rgb(128, 128, 128);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cards a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.card_data a::after {
+  padding: 5px;
+  color: inherit;
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: top;
+}
+
+.cards h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
